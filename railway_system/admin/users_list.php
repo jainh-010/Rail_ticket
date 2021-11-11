@@ -1,0 +1,54 @@
+<?php 
+include('functions.php');
+include('connection.php');
+session_start();
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>User Lists </title>
+	   <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0/style.css">
+	   <link rel="stylesheet" type="text/css" href="bootstrap-5.0.0/css/bootstrap.min.css">
+	   <script type="text/javascript" src="bootstrap-5.0.0/js/juqery_latest.js"></script>
+  	   <script type="text/javascript" src="bootstrap-5.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div>
+			<h1 align="center"> RAILWAY RESERVATION SYSTEM</h1>
+			<hr/>
+	</div>
+<?php
+       		if(isset($_SESSION['sid'])!='')
+         		 {  
+	        		 if($_SESSION['sid'] == "1")
+		         		echo ' 
+				                <ul class="nav nav-pills">
+				                  <li class="nav-item">
+				                    <a class="nav-link "  href="index.php"> HOME </a>
+				                  </li>
+				                  <li class="nav-item">
+				                    <a class="nav-link " href="trains_add.php"> ADD TRAIN </a>
+				                  </li>
+				                  <li class="nav-item">
+				                    <a class ="nav-link active" aria-current="page" href ="users_list.php"> USERS </a>
+				                  </li>
+				                  <li class="nav-item">
+				                    <a class="nav-link" href ="logout.php"> LOGOUT  </a>
+				                  </li>
+				                  <li class="nav-item" >
+				                    <a class="nav-link" href ="about.php"> ABOUT</a> 
+				                  </li>
+				                </ul>
+				                ';
+					 else
+				   		header('location:index.php');
+				 }
+			else
+				header('location:index.php');
+ 		?>
+
+ 		<table class="table table-hover">
+  									...
+									</table>
+</body>
+</html>
