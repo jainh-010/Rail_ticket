@@ -1,4 +1,4 @@
-# railway_system
-A simple system to
-* Search fr trains and seat availability
+# Railway_system
+A simple railway system to
+* Search for trains and seat availability
 * Book and track the ticket
